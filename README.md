@@ -12,7 +12,7 @@
   <a href="https://github.com/Sowjanyar-dev" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white">
   </a>
-  <a href="https://github.com/Sowjanyar-dev/sowjanya-portfolio/blob/main/Software%20Developer%20-%20Sowjanya.pdf" download>
+  <a href="https://github.com/Sowjanyar-dev/sowjanya-portfolio/blob/main/Software%20Developer%20-%20Sowjanya%20(1).pdf" download>
     <img src="https://img.shields.io/badge/Download Resume-gray?style=for-the-badge&logo=adobeacrobatreader">
   </a>
 </p>
