@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sowjanya Rangannagari – UI/UX Engineer Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=IBM+Plex+Sans:wght@400;500&display=swap">
+<style>
+:root{--bg:#f3f5f7;--surface:#fff;--ink:#14202b;--muted:#51606d;--line:#d5dce2;--accent:#0b6e8a;--ok:#2a8f5a;--warn:#c98a12;--err:#c2412d;--ph:#e7ecef;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#10181f;--surface:#18232c;--ink:#e8eef2;--muted:#9aabb8;--line:#2b3a46;--accent:#5cc3de;--ok:#4cc58a;--warn:#e5b34a;--err:#ee7e6b;--ph:#1f2d38;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#10181f;--surface:#18232c;--ink:#e8eef2;--muted:#9aabb8;--line:#2b3a46;--accent:#5cc3de;--ok:#4cc58a;--warn:#e5b34a;--err:#ee7e6b;--ph:#1f2d38;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "IBM Plex Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+header.hero{padding:72px 0 56px;border-bottom:1px solid var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+h1{font-size:clamp(2.4rem,6vw,4.1rem);letter-spacing:-.02em}
+.lede{color:var(--muted);max-width:52ch;margin:20px 0 28px}
+.links a{margin-right:20px;font-weight:500}
+.board{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px}
+.board h2{font-size:1rem;margin-bottom:12px;color:var(--muted);font-family:"IBM Plex Sans",sans-serif;font-weight:500}
+.row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-top:1px solid var(--line);font-size:.95rem;gap:12px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;background:var(--ok)}
+.dot.warn{background:var(--warn)}.dot.err{background:var(--err)}
+.tag{font-size:.85rem;color:var(--muted)}
+.board button{margin-top:12px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:6px;padding:8px 12px;font:inherit;font-size:.9rem;cursor:pointer}
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+section>.wrap>h2{font-size:clamp(1.7rem,3.5vw,2.3rem);margin-bottom:28px}
+.case{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:32px 0;border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0;padding-top:0}
+.case h3{font-size:1.5rem;margin-bottom:6px}
+.meta{color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.case ul{margin:10px 0 14px;padding-left:20px}
+.case li{margin-bottom:6px}
+.ph{background:var(--ph);border:2px dashed var(--line);border-radius:8px;min-height:240px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:var(--muted);font-size:.95rem}
+.stack{font-size:.9rem;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.cols h3{font-size:1.15rem;margin-bottom:8px}
+.cols p{margin:0;color:var(--muted)}
+.demo{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:20px}
+.ctl{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:16px}
+.ctl label{font-size:.9rem;color:var(--muted);display:flex;flex-direction:column;gap:4px}
+.ctl select{font:inherit;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--ink)}
+.ds-alert{border-left:4px solid var(--err);background:var(--ph);padding:10px 14px;border-radius:4px;margin-bottom:14px}
+.ds-badge{display:inline-flex;align-items:center;gap:6px;font-size:.9rem}
+.ds-badge i{width:10px;height:10px;border-radius:50%;background:var(--ok)}
+.ds-badge.warn i{background:var(--warn)}.ds-badge.err i{background:var(--err)}
+.tbl{width:100%;border-collapse:collapse;font-size:.95rem}
+.tbl th,.tbl td{text-align:left;padding:10px 8px;border-top:1px solid var(--line)}
+.tbl th button{all:unset;cursor:pointer;font-weight:600}
+.tbl th button:focus-visible{outline:3px solid var(--accent)}
+.tbl td button{font:inherit;font-size:.9rem;padding:6px 10px;border:1px solid var(--line);border-radius:6px;background:none;color:var(--ink);cursor:pointer}
+.tbl td button:disabled{opacity:.5;cursor:not-allowed}
+.note{color:var(--muted);font-size:.9rem;margin:14px 0 0}
+.scroll{overflow-x:auto}
+footer{padding:48px 0 64px}
+@media(max-width:760px){.hero-grid,.case,.cols{grid-template-columns:1fr}header.hero{padding-top:40px}}
+@media(prefers-reduced-motion:no-preference){.dot{transition:background .3s}}
+[v-cloak]{display:none}
+</style>
+</head>
+<body>
+<header class="hero"><div class="wrap hero-grid">
+<div>
+<h1>Interfaces for complex operational software</h1>
+<p class="lede">I'm Sowjanya Rangannagari, a UI/UX engineer with 8+ years of front-end experience. I design and build data-dense, role-based applications in Vue.js, TypeScript and Three.js, and I leave behind reusable components other developers can maintain.</p>
+<p class="links"><a href="mailto:rangannagarisowjanya98@gmail.com">Email me</a><a href="https://www.linkedin.com/in/sowjanya-rangannagari/">LinkedIn</a><a href="https://medium.com/@rangannagarisowjanya98">Medium</a></p>
+</div>
+<div class="board" aria-label="Example status panel showing the kind of operational screens I design">
+<h2>Example: equipment status panel</h2>
+<div class="row"><span><span class="dot"></span>Sorter line A</span><span class="tag">Running</span></div>
+<div class="row"><span><span class="dot warn"></span>Conveyor 4</span><span class="tag">Slow, check belt</span></div>
+<div class="row"><span><span class="dot err"></span>Station 7</span><span class="tag">Stopped, jam</span></div>
+<div class="row"><span><span class="dot"></span>Charging dock</span><span class="tag">Ready</span></div>
+<button type="button" id="cycle">Simulate an alarm</button>
+</div>
+</div></header>
+
+<section id="work"><div class="wrap">
+<h2>Selected work</h2>
+
+<article class="case">
+<div>
+<h3>Multi-brand hotel platform</h3>
+<p class="meta">WillowTree for Wyndham Hotels &amp; Resorts · 2026 to present</p>
+<p><strong>Problem:</strong> Several brands, many languages, and one existing enterprise codebase that could not be rewritten.</p>
+<ul>
+<li>Built Vue.js and TypeScript UI inside the existing architecture.</li>
+<li>Created reusable patterns for forms, feedback messages, loading, empty and error states.</li>
+<li>Designed layouts that hold up with translated text of different lengths.</li>
+<li>Built an interactive Three.js scene with camera controls and object highlighting.</li>
+<li>Documented component behavior and responsive breakpoints for handoff.</li>
+</ul>
+<p class="stack">Vue.js, TypeScript, Three.js, WebGL, Figma</p>
+</div>
+<div class="ph">Add screenshots: Figma component states, a translated layout, and the Three.js scene (or a link to a live demo).</div>
+</article>
+
+<article class="case">
+<div>
+<h3>Patient support portal</h3>
+<p class="meta">Johnson &amp; Johnson · 2024 to 2026</p>
+<p><strong>Problem:</strong> Long multi-step enrollment and case workflows with sensitive data and several user roles.</p>
+<ul>
+<li>Reworked information hierarchy, validation and error recovery with UX, QA and stakeholders.</li>
+<li>Built a reusable set of data entry, table, dialog and notification components.</li>
+<li>Showed navigation and controls according to user permissions.</li>
+<li>Tested key states with Jest and React Testing Library.</li>
+</ul>
+<p class="stack">React, TypeScript, Jest, accessibility reviews</p>
+</div>
+<div class="ph">Add anonymized screens: a multi-step form, an error state, and the component sheet. No real patient data.</div>
+</article>
+
+<article class="case">
+<div>
+<h3>Onboarding and portfolio dashboards</h3>
+<p class="meta">JPMorgan Chase · 2022 to 2023</p>
+<p><strong>Problem:</strong> Relationship managers needed to read metrics, account status and next actions at a glance.</p>
+<ul>
+<li>Designed and built data-heavy Angular dashboards with a clear hierarchy.</li>
+<li>Turned onboarding into structured multi-stage forms with progress feedback.</li>
+<li>Added role-aware navigation and route guards.</li>
+<li>Improved load time with lazy loading and code splitting.</li>
+</ul>
+<p class="stack">Angular, TypeScript, REST, GraphQL, Cypress</p>
+</div>
+<div class="ph">Add a redrawn, anonymized dashboard mockup with placeholder numbers.</div>
+</article>
+
+<article class="case">
+<div>
+<h3>Transaction monitoring screens</h3>
+<p class="meta">Regions Financial · 2019 to 2021</p>
+<p><strong>Problem:</strong> Reviewers worked through large tables, filters and statuses under time pressure.</p>
+<ul>
+<li>Built React tables with filtering, pagination and status labels.</li>
+<li>Standardized forms, validation and API error handling.</li>
+<li>Applied role-based controls for sensitive data.</li>
+</ul>
+<p class="stack">React, REST, Spring Boot</p>
+</div>
+<div class="ph">Add an anonymized table and filter mockup.</div>
+</article>
+
+<article class="case">
+<div>
+<h3>Inventory and fulfillment screens</h3>
+<p class="meta">Bigbasket · 2016 to 2019</p>
+<p><strong>Problem:</strong> Warehouse staff needed clear order, stock and shipment status.</p>
+<ul>
+<li>Organized order, inventory and shipment details into clearer forms and status views.</li>
+<li>Improved validation messages and feedback for unavailable stock and service failures.</li>
+</ul>
+<p class="stack">JavaScript, HTML5, CSS3, REST, MySQL</p>
+</div>
+<div class="ph">Add a before and after screen if you have one.</div>
+</article>
+</div></section>
+
+<section id="vue-sample"><div class="wrap">
+<h2>Vue.js component sample</h2>
+<p class="lede" style="margin-top:-12px">A small sample I built to show my approach: three reusable Vue 3 components (status badge, alert, sortable table) driven by one view model. Try changing the role and language. This is a demo, not client work.</p>
+<div class="demo" id="vue-demo" v-cloak>
+<div class="ctl">
+<label>Role<select v-model="role"><option value="operator">Operator</option><option value="supervisor">Supervisor</option><option value="admin">Admin</option></select></label>
+<label>Language<select v-model="lang"><option value="en">English</option><option value="es">Español</option><option value="de">Deutsch</option></select></label>
+</div>
+<h3 style="font-size:1.2rem;margin-bottom:12px">{{ t.title }}</h3>
+<ds-alert v-if="!rows[2].acked" :text="t.alert"></ds-alert>
+<div class="scroll"><ds-table :columns="columns" :rows="rows" :sort-key="sortKey" @sort="sortKey=$event">
+<template #state="{row}"><ds-badge :level="row.level" :label="row.acked ? t.ackd : t[row.state]"></ds-badge></template>
+<template #action="{row}"><button type="button" :disabled="!canAck || row.level!=='err' || row.acked" :title="canAck ? '' : t.noperm" @click="row.acked=true">{{ t.ack }}</button></template>
+</ds-table></div>
+<p class="note">{{ canAck ? t.can : t.noperm }}</p>
+</div>
+</div></section>
+
+<section id="approach"><div class="wrap">
+<h2>How I work</h2>
+<div class="cols">
+<div><h3>Start with the workflow</h3><p>I learn what operators do, what they need to see first, and where they make mistakes, then design screens around that.</p></div>
+<div><h3>Build a system, not screens</h3><p>Typography, color, spacing, status indicators, forms, tables and dialogs become documented components developers can reuse.</p></div>
+<div><h3>Work with what exists</h3><p>I improve the current app inside its architecture, review designs with real users, and hand over with documentation.</p></div>
+</div></div></section>
+
+<footer><div class="wrap">
+<h2 style="font-size:1.6rem;margin-bottom:10px">Get in touch</h2>
+<p><a href="mailto:rangannagarisowjanya98@gmail.com">rangannagarisowjanya98@gmail.com</a> · (314) 669-6284</p>
+</div></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.21/vue.global.prod.min.js"></script>
+<script>
+(function(){
+if(!window.Vue)return;
+var M={
+en:{title:"Equipment status",name:"Equipment",state:"State",action:"Action",running:"Running",warning:"Slow, check belt",stopped:"Stopped, jam",ack:"Acknowledge",ackd:"Acknowledged",alert:"Station 7 stopped: jam detected.",can:"You can acknowledge alarms.",noperm:"Your role can view alarms but not acknowledge them."},
+es:{title:"Estado del equipo",name:"Equipo",state:"Estado",action:"Acción",running:"En marcha",warning:"Lento, revisar banda",stopped:"Detenido por atasco",ack:"Reconocer",ackd:"Reconocido",alert:"Estación 7 detenida: atasco detectado.",can:"Puede reconocer alarmas.",noperm:"Su rol puede ver alarmas pero no reconocerlas."},
+de:{title:"Gerätestatus",name:"Anlage",state:"Zustand",action:"Aktion",running:"Läuft",warning:"Verlangsamt, Band prüfen",stopped:"Gestoppt wegen Stau",ack:"Alarm quittieren",ackd:"Quittiert",alert:"Station 7 gestoppt: Stau erkannt.",can:"Sie dürfen Alarme quittieren.",noperm:"Ihre Rolle darf Alarme ansehen, aber nicht quittieren."}
+};
+var app=Vue.createApp({
+data:function(){return{role:"operator",lang:"en",sortKey:"name",rows:[
+{name:"Sorter line A",state:"running",level:"ok",acked:false},
+{name:"Conveyor 4",state:"warning",level:"warn",acked:false},
+{name:"Station 7",state:"stopped",level:"err",acked:false}]}},
+computed:{
+t:function(){return M[this.lang]},
+canAck:function(){return this.role!=="operator"},
+columns:function(){return[{key:"name",label:this.t.name,sortable:true},{key:"state",label:this.t.state},{key:"action",label:this.t.action}]}
+}});
+app.component("ds-badge",{props:["level","label"],template:'<span :class="[\'ds-badge\',level]"><i aria-hidden="true"></i>{{ label }}</span>'});
+app.component("ds-alert",{props:["text"],template:'<div class="ds-alert" role="alert">{{ text }}</div>'});
+app.component("ds-table",{props:["columns","rows","sortKey"],emits:["sort"],
+computed:{sorted:function(){var k=this.sortKey;return this.rows.slice().sort(function(a,b){return String(a[k]).localeCompare(String(b[k]))})}},
+template:'<table class="tbl"><thead><tr><th v-for="c in columns" :key="c.key" scope="col"><button v-if="c.sortable" type="button" @click="$emit(\'sort\',c.key)">{{ c.label }}</button><span v-else>{{ c.label }}</span></th></tr></thead><tbody><tr v-for="r in sorted" :key="r.name"><td v-for="c in columns" :key="c.key"><slot :name="c.key" :row="r">{{ r[c.key] }}</slot></td></tr></tbody></table>'});
+app.mount("#vue-demo");
+})();
+</script>
+<script>
+(function(){
+var b=document.getElementById('cycle');
+if(!b)return;
+var rows=document.querySelectorAll('.board .row');
+var on=false;
+b.addEventListener('click',function(){
+on=!on;
+var dot=rows[0].querySelector('.dot'),tag=rows[0].querySelector('.tag');
+dot.className='dot'+(on?' err':'');
+tag.textContent=on?'Stopped, motor fault':'Running';
+b.textContent=on?'Clear the alarm':'Simulate an alarm';
+});
+})();
+</script>
+</body>
+</html>
